@@ -1,0 +1,24 @@
+spring:
+  datasource: # 框架数据库
+    # mysql连接配置
+    driver-class-name: com.mysql.jdbc.Driver # 驱动名
+    url: jdbc:mysql://localhost:3306/demo1?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true # mysql连接地址
+    username: root # 用户名 root
+    password: LIZHONGJIE199608
+
+  jpa:
+    database: mysql # 数据库
+    hibernate:
+      ddl-auto: update # 反向生成数据库,先去数据库建表也可以,但table名要对应上
+    show-sql: false # 不显示sql 语句
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss # 项目同一时间返回格式
+    time-zone: GMT+8 # 时间编码
+
+##################### Spring Boot WEB start #####################
+# Server HTTP port.
+server:
+  port: 8888  # 访问端口
+  tomcat:
+    uri-encoding: utf-8 # 编码
