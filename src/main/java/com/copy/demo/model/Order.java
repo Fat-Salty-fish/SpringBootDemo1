@@ -3,20 +3,17 @@ package com.copy.demo.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Entity
 @Table( name = "table_orders")
 @Getter
 @Setter
 
-public class Orders {
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;//订单主键
@@ -37,6 +34,6 @@ public class Orders {
     private String buyer ; //订单所属客户姓名
 
     @Transient
-    private Set<Details> details = new HashSet<>();
+    private List<Detail> details = new LinkedList<>();
 
 }

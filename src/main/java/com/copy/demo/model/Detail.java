@@ -5,12 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Random;
 
 @Entity
 @Table(name = "table_details")
 @Getter
 @Setter
-public class Details {
+public class Detail {
 
     @Id
     @GeneratedValue( strategy = GenerationType.AUTO)
@@ -27,5 +28,8 @@ public class Details {
 
     @Column
     private String nameOfArtifact ; //此货物的货物名
+
+
+
 
 }
